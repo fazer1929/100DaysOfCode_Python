@@ -20,15 +20,14 @@ play = input("Do You Wanna Play A Game Of Blackjack 'y' or 'n' : ")
 while play=='y':
     # FIRST CARD DRAW
     cpu_card =[]
-    cpu_card.append(random.choice(cards))
-    cpu_card.append(random.choice(cards))
     p_card=[]
-    p_card.append(random.choice(cards))
-    p_card.append(random.choice(cards))
-    sum = count_sum(p_card)
-    print(f"\tYour Cards Are {p_card}.  Current Score : {sum}")
-    print(f"\tDealer's First Card Is {cpu_card[0]}")
+    for _ in range(2):
+        cpu_card.append(random.choice(cards))
+        p_card.append(random.choice(cards))
+    
     p_sum = count_sum(p_card)
+    print(f"\tYour Cards Are {p_card}.  Current Score : {p_sum}")
+    print(f"\tDealer's First Card Is {cpu_card[0]}")
     
     #IF PLAYER HAS NOT LOST ASK FOR CHOICE
     while p_sum<21:
