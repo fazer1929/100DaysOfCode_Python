@@ -26,7 +26,7 @@ while True:
    
     print(f'Compare A: {opt1["name"]}, a {opt1["description"]}, from {opt1["country"]}.')
     print(art.vs)
-    print(f'Compare A: {opt2["name"]}, a {opt2["description"]}, from {opt2["country"]}.')
+    print(f'Compare B: {opt2["name"]}, a {opt2["description"]}, from {opt2["country"]}.')
     ans = input("Who has more followers? Type 'A' or 'B':  ")
     if (real_ans>0 and ans.lower() == 'a') or (real_ans<0 and ans.lower() == 'b'):
         mans = True
