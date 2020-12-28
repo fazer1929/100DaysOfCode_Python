@@ -19,6 +19,11 @@ class Scoreboard(Turtle):
         self.goto(0,0)
         self.write(f"GAME OVER, YOU WIN!!",align="center",font = ("Courier",24,"normal"))
     
+    def lose(self):
+        self.clear()
+        self.goto(0,0)
+        self.write(f"GAME OVER, YOU LOST!!",align="center",font = ("Courier",24,"normal"))
+    
     def levelup(self):
         self.level += 1
         if self.level >5:
